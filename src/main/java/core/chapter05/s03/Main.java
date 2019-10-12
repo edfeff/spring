@@ -2,6 +2,9 @@ package core.chapter05.s03;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+/**
+ * 切点表达式的进行逻辑组合
+ */
 public class Main {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context
