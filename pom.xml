@@ -52,8 +52,9 @@
                                 <resource>
                                     <directory>${basedir}/src/main/java</directory>
                                     <includes>
-                                        <include>**/*.xml</include>
-                                        <include>**/*.properties</include>
+<!--                                        <include>**/*.xml</include>-->
+<!--                                        <include>**/*.properties</include>-->
+                                        <include>**/*</include>
                                     </includes>
                                 </resource>
                             </resources>
