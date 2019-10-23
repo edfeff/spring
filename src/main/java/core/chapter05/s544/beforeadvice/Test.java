@@ -1,6 +1,6 @@
-package core.chapter05.s05.beforeadvice;
+package core.chapter05.s544.beforeadvice;
 
-import core.chapter05.s05.S05User;
+import core.chapter05.s544.S05User;
 import org.springframework.context.ApplicationContext;
 
 public class Test {
@@ -9,8 +9,8 @@ public class Test {
         S05User bean = instance.getBean(S05User.class);
         bean.say();
         /**
-         * core.chapter05.s05.beforeadvice.BeforeAdviceAnnotationbefore
-         * core.chapter05.s05.S05User say
+         * core.chapter05.s544.beforeadvice.BeforeAdviceAnnotationbefore
+         * core.chapter05.s544.S05User say
          */
     }
 }

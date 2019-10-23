@@ -1,4 +1,4 @@
-package core.chapter05.s05.beforeadvice;
+package core.chapter05.s544.beforeadvice;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

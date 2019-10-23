@@ -1,6 +1,6 @@
-package core.chapter05.s05.afterreturningadvice;
+package core.chapter05.s544.afterreturning;
 
-import core.chapter05.s05.S05User;
+import core.chapter05.s544.S05User;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;

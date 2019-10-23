@@ -1,8 +1,7 @@
-package core.chapter05.s05.beforeadvice;
+package core.chapter05.s544.beforeadvice;
 
-import core.chapter05.s05.S05User;
+import core.chapter05.s544.S05User;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
