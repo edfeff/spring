@@ -38,6 +38,22 @@ public class AroundAdviceExample {
         System.out.println("after");
     }
 
+    /**
+     * JoinPoint
+     * <p>
+     * <p>
+     * getArgs(): Returns the method arguments. 方法参数列表
+     * <p>
+     * getThis(): Returns the proxy object. 代理对象
+     * <p>
+     * getTarget(): Returns the target object. 原始对象
+     * <p>
+     * getSignature(): Returns a description of the method that is being advised. 原始方法签名
+     * <p>
+     * toString(): Prints a useful description of the method being advised.
+     *
+     * @param joinPoint
+     */
     private void before(ProceedingJoinPoint joinPoint) {
         System.out.println("before");
         Signature signature = joinPoint.getSignature();
