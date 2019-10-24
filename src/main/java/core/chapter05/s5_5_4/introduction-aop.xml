@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <bean id="usageTracking" class="core.chapter05.s5_5_4.UsageTracking"/>
+    <bean id="service" class="core.chapter05.s5_5_4.SystemArchitecture"/>
+
+    <aop:config>
+        <aop:aspect id="usageTrackerAgent" ref="usageTracking">
+            <aop:declare-parents types-matching="core.chapter05.s5_5_4.*+"
+                                 implement-interface="core.chapter05.s5_5_4.UsageTracked"
+                                 default-impl="core.chapter05.s5_5_4.DefaultUsageTracked"/>
+<!--            <aop:before pointcut="execution(* core.chapter05.s5_5_4.SystemArchitecture.hello()) and this(usageTracked)"-->
+            <!--                        method="readUsage"/>-->
+
+        </aop:aspect>
+    </aop:config>
+
+</beans>
