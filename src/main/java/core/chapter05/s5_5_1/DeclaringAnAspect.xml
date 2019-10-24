@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <bean name="service" class="core.chapter05.s5_5_1.Service"/>
+    <bean name="aBean" class="core.chapter05.s5_5_1.DeclaringAnAspect"/>
+
+    <!--    声明一个切面类-->
+    <aop:config>
+        <aop:aspect id="myAspect" ref="aBean">
+            <aop:pointcut id="p1" expression="execution(* core.chapter05.s5_5_1.Service.*())"/>
+            <aop:pointcut id="p1" expression="execution(* core.chapter05.s5_5_1.Service.*())"/>
+            <aop:before method="before" pointcut-ref="p1"/>
+            <aop:after method="after" pointcut-ref="p1"/>
+            <aop:around method="around" pointcut-ref="p1"/>
+
+        </aop:aspect>
+    </aop:config>
+</beans>

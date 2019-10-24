@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+    <bean id="service" class="core.chapter05.s5_5_3.DefaultFooService"/>
+    <bean id="profiler" class="core.chapter05.s5_5_3.SimpleProfiler"/>
+    <aop:config>
+        <aop:aspect ref="profiler">
+            <aop:pointcut id="p1"
+                          expression="execution(* core.chapter05.s5_5_3.PersonService.getPerson(String,int)) and args(name,age)"/>
+            <aop:around method="profile" pointcut-ref="p1"/>
+        </aop:aspect>
+    </aop:config>
+
+</beans>
