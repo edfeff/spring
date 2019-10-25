@@ -1,4 +1,4 @@
-package core.chapter04._1;
+package core.chapter04._1._0;
 
 import org.springframework.expression.Expression;
 import org.springframework.expression.ExpressionParser;
@@ -26,6 +26,9 @@ public class SpelExample6 {
         String value = (String) expression.getValue(tesla);
         System.out.println(value);
 
+//        Evaluate the expression in the default context against the specified root object.
+//        If the result of the evaluation does not match (and cannot be converted to) the expected result type then an exception will be returned
+//        在默认上下文中针对指定的根对象评估表达式。 如果评估结果与预期结果类型不匹配（并且不能转换为预期结果），则将返回异常
         expression = parser.parseExpression("name == 'Nikola Tesla'");
 
         Boolean result = expression.getValue(tesla, Boolean.class);

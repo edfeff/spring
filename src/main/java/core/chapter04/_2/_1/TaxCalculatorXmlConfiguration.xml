@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--    systemProperties-->
+    <bean id="taxCalculator" class="core.chapter04._2._1.TaxCalculator">
+        <property name="userName" value="#{systemProperties['user.name']}"/>
+        <property name="userLanguage" value="#{systemProperties['user.language']}"/>
+        <property name="userCountry" value="#{systemProperties['user.country']}"/>
+        <property name="userRegion" value="#{systemProperties['user.region']}"/>
+        <property name="userTimezone" value="#{systemProperties['user.timezone']}"/>
+        <property name="userHome" value="#{systemProperties['user.home']}"/>
+    </bean>
+</beans>

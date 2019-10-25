@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="numberGuess" class="core.chapter04._2._1.NumberGuess">
+        <!--        直接调用Math的random函数 -->
+        <property name="randomNumber" value="#{T(java.lang.Math).random() *100.0}"/>
+    </bean>
+</beans>
