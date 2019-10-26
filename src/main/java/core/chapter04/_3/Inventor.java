@@ -12,10 +12,9 @@ public class Inventor {
     public Inventor() {
     }
 
-    public Inventor(String name, Date birthdate, PlaceOfBirth placeOfBirth) {
+    public Inventor(String name, Date birthdate, String placeOfBirth) {
         this.name = name;
         this.birthdate = birthdate;
-        this.placeOfBirth = placeOfBirth;
     }
 
     public String getName() {
@@ -58,18 +57,23 @@ public class Inventor {
         this.placeOfBirth = placeOfBirth;
     }
 
+    public static Inventor getInventor(String name) {
+
+        Inventor inventor = getInventor();
+        inventor.setName(name);
+        return inventor;
+    }
+
     public static Inventor getInventor() {
         PlaceOfBirth placeOfBirth = new PlaceOfBirth();
         placeOfBirth.setCity("city");
         placeOfBirth.setCountry("country");
-
-
         Inventor inventor = new Inventor();
         inventor.setBirthdate(new Date());
         inventor.setName("wpp");
         inventor.setNationality("nation");
         inventor.setPlaceOfBirth(placeOfBirth);
-        inventor.setInventions(new String[]{"a", "b", "c"});
+        inventor.setInventions(new String[]{"a", "b", "c", "d", "e"});
 
         return inventor;
     }
