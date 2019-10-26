@@ -8,6 +8,8 @@ import java.util.Map;
 /**
  * map
  * {key:value}
+ * <p>
+ * {:} 表示空的map
  *
  * @author wangpp
  */
