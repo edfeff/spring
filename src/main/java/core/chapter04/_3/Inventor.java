@@ -1,5 +1,6 @@
 package core.chapter04._3;
 
+import java.util.Arrays;
 import java.util.Date;
 
 public class Inventor {
@@ -76,5 +77,16 @@ public class Inventor {
         inventor.setInventions(new String[]{"a", "b", "c", "d", "e"});
 
         return inventor;
+    }
+
+    @Override
+    public String toString() {
+        return "Inventor{" +
+                "name='" + name + '\'' +
+                ", nationality='" + nationality + '\'' +
+                ", inventions=" + Arrays.toString(inventions) +
+                ", birthdate=" + birthdate +
+                ", placeOfBirth=" + placeOfBirth +
+                '}';
     }
 }
