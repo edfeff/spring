@@ -1,4 +1,4 @@
-package core.chapter03._4;
+package core.chapter03._4._1;
 
 import core.chapter03._2.Person;
 import core.chapter03._2.customer.Address;
