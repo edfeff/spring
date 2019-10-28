@@ -22,4 +22,12 @@ public class PlaceOfBirth {
     public void setCountry(String country) {
         this.country = country;
     }
+
+    @Override
+    public String toString() {
+        return "PlaceOfBirth{" +
+                "city='" + city + '\'' +
+                ", country='" + country + '\'' +
+                '}';
+    }
 }
