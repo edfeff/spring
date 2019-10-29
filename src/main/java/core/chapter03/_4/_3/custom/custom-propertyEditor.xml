@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--    自定义 PropertyEditor-->
+    <!-- 使用CustomEditorConfigurer配置-->
+    <bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+        <property name="customEditors">
+            <map>
+                <entry key="core.chapter03._4._3.custom.ExoticType"
+                       value="core.chapter03._4._3.custom.ExoticTypeEditor"/>
+            </map>
+        </property>
+    </bean>
+    <!--    实现 将String转成为 ExoticType-->
+    <bean id="sample" class="core.chapter03._4._3.custom.DependsOnExoticType">
+        <property name="type" value="aNameForExoticType"/>
+    </bean>
+
+</beans>

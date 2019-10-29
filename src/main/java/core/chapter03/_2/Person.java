@@ -1,7 +1,5 @@
 package core.chapter03._2;
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-
 /**
  * @author wangpp
  */
