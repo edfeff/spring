@@ -9,12 +9,16 @@
             <map>
                 <entry key="core.chapter03._4._3.custom.ExoticType"
                        value="core.chapter03._4._3.custom.ExoticTypeEditor"/>
+                <entry key="core.chapter03._4._3.custom.Address"
+                       value="core.chapter03._4._3.custom.AddressPropertyEditor"/>
+
             </map>
         </property>
     </bean>
     <!--    实现 将String转成为 ExoticType-->
     <bean id="sample" class="core.chapter03._4._3.custom.DependsOnExoticType">
         <property name="type" value="aNameForExoticType"/>
+        <property name="address" value="wpp:home"/>
     </bean>
 
 </beans>
