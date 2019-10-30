@@ -93,3 +93,48 @@ spring支持切入点的 交 并
 ```
 
 ## 6.2.4. Convenience pointcut implementations
+
+spring提供了开箱即用的切入点类
+
+static pointcut 基于方法和目标类，并且spring只会计算一次，之后会缓存起来。
+1. 正则表达式切入点
+org.springframework.aop.support.JdkRegexpMethodPointcut
+
+```java
+    @Override
+	protected boolean matches(String pattern, int patternIndex) {
+		Matcher matcher = this.compiledPatterns[patternIndex].matcher(pattern);
+		return matcher.matches();
+	}
+```
+类 RegexpMethodPointcutAdvisor 更进一步的简化了正则的切入的需要，里面使用JdkRegexpMethodPointcut
+并且可以进行组合切面
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
