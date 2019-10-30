@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--
+    In order to be eligible for Spring-driven method validation, all target classes need to be annotated
+    with Spring’s @Validated annotation, optionally declaring the validation groups to use. Check out
+    the MethodValidationPostProcessor javadocs for setup details with Hibernate Validator and Bean
+    Validation 1.1 providers.-->
+    <!--    需要验证的方法需要使用注解@Validated 这是因为MethodValidationPostProcessor中使用AOP的原因-->
+    <!--    可以使用方法setValidatedAnnotationType 进行修改-->
+    <bean class="org.springframework.validation.beanvalidation.MethodValidationPostProcessor"/>
+</beans>
