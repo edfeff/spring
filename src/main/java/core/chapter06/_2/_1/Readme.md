@@ -69,3 +69,27 @@ spring支持切入点的 交 并
 原始的PointCut接口，可以进行2个方面的匹配，类和方法。分别对应ClassFilter 和 MethodFilter接口。
 为了灵活性，spring允许多个PointCut进行交和并的运算，这是通过类ComposablePointCut实现的。
 为了支持ClassFilter的运算，加入了类UnionClassFilter 和IntersectionClassFilter，同理，为了MethodFilter的运算，加入了 UnionMethodMatcher 和IntersectionMethodMatcher
+同时工具类Pointcuts 就是利用里上述的原理。
+
+---
+## 6.2.3. AspectJ expression pointcuts
+为了支持AspectJ表达式的切入点，spring提供了类org.springframework.aop.aspectj.AspectJExpressionPointcut
+原理就是 match方法中 利用AspectJ的表达式PointcutExpression来进行类和方法的切入点判断
+
+支持的表达式类型定义：
+```java
+	static {
+		SUPPORTED_PRIMITIVES.add(PointcutPrimitive.EXECUTION);
+		SUPPORTED_PRIMITIVES.add(PointcutPrimitive.ARGS);
+		SUPPORTED_PRIMITIVES.add(PointcutPrimitive.REFERENCE);
+		SUPPORTED_PRIMITIVES.add(PointcutPrimitive.THIS);
+		SUPPORTED_PRIMITIVES.add(PointcutPrimitive.TARGET);
+		SUPPORTED_PRIMITIVES.add(PointcutPrimitive.WITHIN);
+		SUPPORTED_PRIMITIVES.add(PointcutPrimitive.AT_ANNOTATION);
+		SUPPORTED_PRIMITIVES.add(PointcutPrimitive.AT_WITHIN);
+		SUPPORTED_PRIMITIVES.add(PointcutPrimitive.AT_ARGS);
+		SUPPORTED_PRIMITIVES.add(PointcutPrimitive.AT_TARGET);
+	}
+```
+
+## 6.2.4. Convenience pointcut implementations
