@@ -3,11 +3,12 @@
 ```java
 
 package org.springframework.format;
-
+// Formatter组合了两个接口，实现了字符串和类型的互相转换
 public interface Formatter<T> extends Printer<T>, Parser<T> {
     
 }
 
+// Printer 用于将对象转成字符串
 @FunctionalInterface
 public interface Printer<T> {
 
@@ -15,6 +16,7 @@ public interface Printer<T> {
 
 }
 
+// Parser 用于将字符串转成对象
 @FunctionalInterface
 public interface Parser<T> {
 
